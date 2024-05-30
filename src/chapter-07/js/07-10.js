@@ -17,14 +17,14 @@ function init() {
     return texture;
   }
   function getTexture1(){
-    var texture = new THREE.TextureLoader().load("../../assets/textures/particles/raindrop-1.png");
+    var texture = new THREE.TextureLoader().load("../../assets/textures/particles/sj1.jpg");
     return texture;
   };
   function createSprites() {
     group = new THREE.Object3D();
     var range = 200;
     for (var i = 0; i < 400; i++) {
-      group.add(createSprite(6, false, 0.6, 0xffffff, i % 5, range));
+      group.add(createSprite(10, false, 0.6, 0xffffff, i % 5, range));
     }
     scene.add(group);
   }
