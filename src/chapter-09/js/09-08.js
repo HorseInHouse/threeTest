@@ -23,11 +23,14 @@ function init() {
 
       var mat = new THREE.MeshLambertMaterial({morphTargets: true, vertexColors: THREE.FaceColors});
       mesh = new THREE.Mesh(geometry, mat);
+    console.log('mesh:',mesh)
       mesh.scale.set(0.15,0.15,0.15);
       mesh.translateY(-10);
       mesh.translateX(10);
 
       mixer = new THREE.AnimationMixer( mesh );
+    console.log('mixer:',mixer)
+    console.log('geometry:',geometry)
       // or create a custom clip from the set of morphtargets
       // var clip = THREE.AnimationClip.CreateFromMorphTargetSequence( 'gallop', geometry.morphTargets, 30 );
       animationClip = geometry.animations[0] 

@@ -5,14 +5,14 @@ function init() {
   camera.lookAt(new THREE.Vector3(0, 0, 0));
 
   var posSrc = { pos: 1}  
-  var tween = new TWEEN.Tween(posSrc).to({pos: 0}, 2000); 
-  tween.easing(TWEEN.Easing.Bounce.InOut); 
+  var tween = new TWEEN.Tween(posSrc).to({pos: 0}, 2000);
+  // tween.easing(TWEEN.Easing.Bounce.InOut);
  
   var tweenBack = new TWEEN.Tween(posSrc).to({pos: 1}, 2000); 
-  tweenBack.easing(TWEEN.Easing.Bounce.InOut); 
+  // tweenBack.easing(TWEEN.Easing.Bounce.InOut);
   
   tweenBack.chain(tween); 
-  tween.chain(tweenBack); 
+  tween.chain(tweenBack);
 
   tween.start();
 

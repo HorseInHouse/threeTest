@@ -114,7 +114,9 @@ function init() {
     function onDocumentMouseDown(event) {
 
         var vector = new THREE.Vector3((event.clientX / window.innerWidth) * 2 - 1, -(event.clientY / window.innerHeight) * 2 + 1, 0.5);
+        console.log('vector:',vector)
         vector = vector.unproject(camera);
+        console.log('vector:1',vector)
 
         var raycaster = new THREE.Raycaster(camera.position, vector.sub(camera.position).normalize());
         var intersects = raycaster.intersectObjects([sphere, cylinder, cube]);

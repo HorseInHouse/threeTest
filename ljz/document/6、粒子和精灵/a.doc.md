@@ -6,6 +6,19 @@ const material = new THREE.SpriteMaterial({
 const sprite = new THREE.Sprite(material);
 ```
 
+
+```javascript
+// geom的创建
+const geom = new THREE.Geometry();
+for (var x = -15; x < 15; x++) {
+    for (var y = -10; y < 10; y++) {
+        var particle = new THREE.Vector3(x * 4, y * 4, 0);
+        geom.vertices.push(particle);
+        geom.colors.push(new THREE.Color(Math.random() * 0xffffff));
+    }
+}
+```
+
 #### THREE.points和THREE.PointsMaterial
 + 通过THREE.Geometry添加vertices
 ```javascript
