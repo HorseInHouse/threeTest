@@ -13,18 +13,20 @@ function init() {
   var group;
 
   function getTexture() {
-    var texture = new THREE.TextureLoader().load("../../assets/textures/particles/test121.jpeg");
+    // var texture = new THREE.TextureLoader().load("../../assets/textures/particles/test121.jpeg");
+    var texture = new THREE.TextureLoader().load("../../assets/textures/particles/112233.png");
     return texture;
   }
   function getTexture1(){
-    var texture = new THREE.TextureLoader().load("../../assets/textures/particles/sj1.jpg");
+    // var texture = new THREE.TextureLoader().load("../../assets/textures/particles/sj1.jpg");
+    var texture = new THREE.TextureLoader().load("../../assets/textures/particles/11223344.png");
     return texture;
   };
   function createSprites() {
     group = new THREE.Object3D();
     var range = 200;
     for (var i = 0; i < 400; i++) {
-      group.add(createSprite(10, false, 0.6, 0xffffff, i % 5, range));
+      group.add(createSprite(8, false, 0.7, 0xffffff, i % 5, range));
     }
     scene.add(group);
   }
@@ -34,7 +36,7 @@ function init() {
     var spriteMaterial = new THREE.SpriteMaterial({
       opacity: opacity,
       color: color,
-      transparent: transparent,
+      transparent: true,
       map: Math.round(Math.random()) + 1 === 1 ? getTexture() :getTexture1()
     });
 
